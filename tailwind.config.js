@@ -6,6 +6,17 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      abc:["Roboto Serif","serif"]
+    },
+    colors:{
+      transparent: "transparent",
+      "white": "#ffffff",
+      "skyBlue":"#043166",
+      "red":"#FF0000",
+      "grey":"#B7BBC0"
+
+    }
   },
   plugins: [],
 }
