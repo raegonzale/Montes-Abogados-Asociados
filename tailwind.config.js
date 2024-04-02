@@ -16,7 +16,10 @@ export default {
       "red":"#FF0000",
       "grey":"#B7BBC0"
 
-    }
+    },
+    container: {
+      center: true,
+    },
   },
   plugins: [],
 }
