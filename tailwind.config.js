@@ -7,19 +7,41 @@ export default {
   theme: {
     extend: {},
     fontFamily:{
-      abc:["Roboto Serif","serif"]
+      abc:["Roboto Serif","serif"],
+      abc2:["Square Peg","cursive"]
     },
     colors:{
-      transparent: "transparent",
+      
       "white": "#ffffff",
       "skyBlue":"#043166",
+      "blue":"#0189DD",
       "red":"#FF0000",
-      "grey":"#B7BBC0"
+      "grey":"#B7BBC0",
+      "darkBlue":"#051A39",
+      
+    },
 
+    animation: {
+      blob:"blob 50s infinite"
     },
-    container: {
-      center: true,
+
+    keyframes: {
+      blob: {
+        "0%":{
+          transform: "translate(0px, 0px) scale(1)"
+        },
+        "33%":{
+          transform:"translate(30px, -50px) scale(0.8)"
+        },
+        "66%":{
+          transform:"translate(20px, -20px)scale(0.9)"
+        },
+        "100%":{
+          transform:"translate(0px, 0px) scale(1)"
+        },
+      },
     },
+    
   },
   plugins: [],
 }

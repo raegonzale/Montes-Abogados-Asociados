@@ -1,10 +1,14 @@
 import { Header } from "./components/Header"
+import {PrincipalArticle} from "./components/PrincipalArticle"
 
 function App() {
 
  return (
-   <main className="pt-3 w-auto mx-auto flex justify-center xl:max-w-screen-xl xl:flex xl:justify-center ">
-    <Header />
+   <main className="mx-auto xl:justify-center">
+    
+    <Header />   
+
+    <PrincipalArticle />
    </main>
  )  
 }
