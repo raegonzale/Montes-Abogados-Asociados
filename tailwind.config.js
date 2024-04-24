@@ -14,7 +14,7 @@ export default {
       
       "white": "#ffffff",
       "skyBlue":"#043166",
-      "blue":"#0189DD",
+      "blue":"#00D1FF",
       "red":"#FF0000",
       "grey":"#B7BBC0",
       "darkBlue":"#051A39",
@@ -22,7 +22,7 @@ export default {
     },
 
     animation: {
-      blob:"blob 50s infinite"
+      blob:"blob 20s infinite"
     },
 
     keyframes: {
