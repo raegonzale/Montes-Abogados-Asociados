@@ -10,27 +10,29 @@ import {MenuMobile} from '../assets/icons/MenuMobile.jsx';
 export const NavBar = () => {
   return (
     <>
-    <ul className="font-abc text-white xl:h-[34px] xl:w-[500px] text-[14px] hidden xl:flex xl:mx-16 xl:text-[14px] 
-    xl:items-center xl:place-content-around">
-        <li>
+    <ul className="font-abc text-white text-[14px] xl:h-[34px] xl:w-[700px] hidden xl:flex xl:mx-16 xl:text-[15px] xl:items-center xl:place-content-around">
+        <li className='hover:text-blue hover:font-bold'>
           <a href="#">Soluciones</a>
         </li>
-        <li>
+        <li className='hover:text-blue'>
           <a href="#">Nosotros</a>
         </li>
-        <li>
+        <li className='hover:text-blue'>
           <a href="#">Talentos</a>
         </li>
-        <li>
+        <li className='hover:text-blue'>
           <a href="#">Insigths</a>
-        </li>
-        <li>
+        </li >
+        <li className='hover:text-blue'>
           <a href="#">Clientes</a>
         </li>
+        <li className='hover:text-blue'>
+          <a href="#">Contacto</a>
+        </li>
+
         
     </ul>  
-    <span className="xl:h-[34px] xl:w-[230px] hidden xl:items-center xl:flex xl:place-content-around xl:justify-around">
-      <button onclick="#" className= "xl:w-[120px] xl:h-[35px] items-center rounded-lg bg-white text-blue text-[14px] font-abc">Contactanos</button>
+    <span className="xl:h-[34px] xl:w-[70px] hidden xl:items-center xl:flex xl:place-content-around xl:justify-around">
       <Language/>
       <DarkMode/>
     </span>

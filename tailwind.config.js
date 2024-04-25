@@ -8,16 +8,20 @@ export default {
     extend: {},
     fontFamily:{
       abc:["Roboto Serif","serif"],
-      abc2:["Square Peg","cursive"]
+      abc2:["Roboto","sans-serif"]
+   
     },
     colors:{
       
       "white": "#ffffff",
       "skyBlue":"#043166",
-      "blue":"#00D1FF",
+      "blue":"#0189DD",
+      "lightBlue":"#00D1FF",
+      "darkBlue":"#051A39",
+
       "red":"#FF0000",
       "grey":"#B7BBC0",
-      "darkBlue":"#051A39",
+
       
     },
 
