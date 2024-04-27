@@ -1,14 +1,19 @@
 import { Header } from "./components/Header"
 import {PrincipalArticle} from "./components/PrincipalArticle"
+import { Slider } from "./components/Slider"
+
 
 function App() {
 
  return (
-   <main className="mx-auto xl:justify-center">
+   <main>
     
     <Header />   
 
     <PrincipalArticle />
+
+    <Slider />
+
    </main>
  )  
 }
