@@ -1,6 +1,6 @@
 import { Header } from "./components/Header"
 import {PrincipalArticle} from "./components/PrincipalArticle"
-import { Slider } from "./components/Slider"
+import { SecondArticle } from "./components/SecondArticle"
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
     <PrincipalArticle />
 
-    <Slider />
+    <SecondArticle />
 
    </main>
  )  

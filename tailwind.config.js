@@ -18,9 +18,9 @@ export default {
       "blue":"#0189DD",
       "lightBlue":"#00D1FF",
       "darkBlue":"#051A39",
-
+      "blueBg":"EDFBFF",
       "red":"#FF0000",
-      "grey":"#B7BBC0",
+      "grey":"#ABADB3",
 
       
     },

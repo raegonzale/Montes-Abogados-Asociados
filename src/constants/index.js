@@ -7,7 +7,7 @@ import societario from '../assets/images/societario.jpg';
 
 export const ServiceData = [
     {
-        title: "Administración Recursos Humanos",
+        title: "Recursos Humanos",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         backgroundImage: adminRH
     },
