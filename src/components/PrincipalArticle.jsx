@@ -16,7 +16,7 @@ export const PrincipalArticle = () => {
         Texto del articulo principal  
         <div className="absolute top-32 flex flex-col xl:top-44 xl:items-end px-6 xl:h-[400px] xl:w-[900px] xl:ml-52">
           <article className="my-2 text-white font-abc2 text-[40px] font-bold leading-tight text-center xl:text-right xl:text-[60px] ">Impulsamos el crecimiento de tu empresa con</article>
-          <article className="my-2 text-lightBlue font-abc2 text-[24px] leading-tight text-center xl:text-right ">soluciones jurídicas y de gestión, enfocadas en impulsar el desarrollo, competitividad y eficiencia de tu negocio.</article>
+          <article className="my-2 text-lightBlue font-abc2 text-[24px] leading-tight text-center xl:text-right ">soluciones jurídicas y de gestión, enfocadas en fortalecer el desarrollo, competitividad y eficiencia de tu negocio.</article>
           <button onClick="#" className="mt-7 font-abc h-[40px] items-center rounded-lg hover:text-white hover:bg-gradient-to-r from-lightBlue to-skyBlue hover:border-blue hover:border-1 text-white border-white border-2 text-[16px] xl:w-[170px]">¿Comenzamos?</button>
         </div>
       </div>

@@ -1,59 +1,57 @@
 import logo from "../assets/logos/logo.png";
 import logoBlanco from "../assets/logos/logoBlanco.png";
-
 import { DarkMode } from "../assets/icons/DarkMode.jsx";
 import { Language } from "../assets/icons/Language.jsx";
 import { MenuMobile } from "../assets/icons/MenuMobile.jsx";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 
+//Este componente contiene la barra de navegación
+
 export const Header = () => {
+  //Funcion para cambio de color de la barra de navegación al hacer scroll
+  const [scrolled, setScrolled] = useState(false);
 
-  const [scrolled, setScrolled]= useState(false);
-  const navRef = useRef(null);
-
-  const handleScroll = ()=> {
-    if(window.scrollY> 80) {
+  const handleScroll = () => {
+    if (window.scrollY > 80) {
       setScrolled(true);
     } else {
-      setScrolled(false)
+      setScrolled(false);
     }
   };
 
-  useEffect (() =>{
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener(scroll, handleScroll);
-  },[]);
-  
+  }, []);
 
   return (
-    <header className={`w-full mx-auto justify-center h-[80px] fixed z-10 flex place-content-between items-center transition-all duration-1000 ${scrolled ? "bg-blue shadow-sm shadow-grey " : ""}`}>
-    
-      <div className="xl:w-60 px-1 hidden ">
-        <img src={logo} alt="Logo principal degrade" />
-      </div>
-
-      <div className="xl:w-60 px-1 hidden xl:flex">
+    <header
+      className={`w-full mx-auto justify-center h-[70px] fixed z-10 flex place-content-between items-center transition-all duration-700 ${
+        scrolled ? "bg-blue shadow-md shadow-grey " : ""
+      }`}
+    >
+    <div className="xl:w-60 px-4 hidden xl:flex">
         <img src={logoBlanco} alt="Logo principal Blanco" />
       </div>
 
-      <ul className="font-abc text-white text-[14px] xl:h-[34px] xl:w-[700px] hidden xl:flex xl:mx-16 xl:text-[15px] xl:items-center xl:place-content-around">
-        <li className="hover:text-lightBlue">
+      <ul className="font-abc text-white text-[14px] xl:h-[34px] xl:w-[700px] hidden xl:flex xl:mx-16 xl:text-[13px] xl:items-center xl:place-content-around">
+        <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Soluciones</a>
         </li>
-        <li className="hover:text-lightBlue">
+        <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Nosotros</a>
         </li>
-        <li className="hover:text-lightBlue">
+        <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Talentos</a>
         </li>
-        <li className="hover:text-lightBlue">
+        <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Insigths</a>
         </li>
-        <li className="hover:text-lightBlue">
+        <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Clientes</a>
         </li>
-        <li className="hover:text-lightBlue">
+        <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Contacto</a>
         </li>
       </ul>
