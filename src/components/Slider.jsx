@@ -38,20 +38,19 @@ export const Slider = () => {
           <SwiperSlide key={item.title}>
             <div className="flex flex-col gap-6 group relative rounded-xl px-2 pt-1 w-[250px] h-[200px] lg:w-[250px] lg:h-[200px] xl:w-[230px] xl:h-[280px] cursor-pointer">
               <div
-                className="absolute inset-0 bg-cover bg-center rounded-xl shadow-md shadow-grey"
+                className="absolute inset-0 bg-cover bg-center rounded-xl shadow-sm shadow-grey"
                 style={{ backgroundImage: `url(${item.backgroundImage})` }}
               />
-              <div className="absolute inset-0 bg-skyBlue opacity-60 mix-blend-multiply rounded-xl group-hover:opacity-90" />
-                <div className="relative p-1 pt-4 flex flex-col">
-                <div className="text-[21px] font-bold text-lightBlue font-abc2">
+              <div className="absolute inset-0 bg-skyBlue opacity-10 mix-blend-multiply rounded-xl group-hover:opacity-70" />
+                <div className="relative p-1 pt-56 flex flex-col">
+                
+                
+                <div className="text-center text-[15px] font-sembold text-white font-abc2 bg-blue bg-opacity-90 bg-mix-blend-multiply rounded-lg ">
                   {item.title}
                 </div>
-                <div className="text-sm text-white font-abc2">
-                  {item.content}
-                </div>
-                <div>
-                  <OpenNew />
-                </div>
+                
+
+
               </div>
             </div>
           </SwiperSlide>

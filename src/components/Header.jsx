@@ -28,7 +28,7 @@ export const Header = () => {
   return (
     <header
       className={`w-full mx-auto justify-center h-[70px] fixed z-10 flex place-content-between items-center transition-all duration-700 ${
-        scrolled ? "bg-blue shadow-md shadow-grey " : ""
+        scrolled ? "bg-blue " : ""
       }`}
     >
     <div className="xl:w-60 px-4 hidden xl:flex">

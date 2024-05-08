@@ -6,7 +6,7 @@ export const ThirdArticle = () => {
       
       
       <div className="relative w-[1100px] h-[400px]">
-        <p className="leading-tight absolute top-40 left-20 w-[480 px] font-abc2 text-skyBlue font-extrabold text-[42px]">Gracias a nuestras soluciones innovadoras</p>
+        <p className="leading-tight absolute top-40 left-20 w-[480 px] font-abc2 text-blue font-extrabold text-[42px]">Gracias a nuestras soluciones innovadoras</p>
         <p className="leading-tight absolute top-[270px] left-20 w-[480 px] font-abc2 text-skyBlue text-[20px] ">Tenemos la confianza de de nuestros clientes, que han llevando sus negocios a un nuevo nivel de eficiencia y seguridad juridica. </p>
       </div>
 
