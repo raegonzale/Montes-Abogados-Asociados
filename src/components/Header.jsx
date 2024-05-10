@@ -27,29 +27,23 @@ export const Header = () => {
 
   return (
     <header
-      className={`w-full mx-auto justify-center h-[70px] fixed z-10 flex place-content-between items-center transition-all duration-700 ${
+      className={`w-full mx-auto justify-center h-[70px] fixed z-20 flex place-content-between items-center transition-all duration-700 ${
         scrolled ? "bg-blue " : ""
       }`}
     >
-    <div className="xl:w-60 px-4 hidden xl:flex">
+    <div className="xl:w-60 px-3 hidden xl:flex">
         <img src={logoBlanco} alt="Logo principal Blanco" />
       </div>
 
-      <ul className="font-abc text-white text-[14px] xl:h-[34px] xl:w-[700px] hidden xl:flex xl:mx-16 xl:text-[13px] xl:items-center xl:place-content-around">
-        <li className="hover:text-lightBlue hover:underline underline-offset-8">
+      <ul className=" font-abc2 text-white text-[14px] xl:h-[34px] xl:w-[600px] hidden xl:flex xl:mx-24 xl:text-[15px] xl:items-center xl:place-content-around xl:justify-aroun xl:px-16">
+        <li className="hover:text-lightBlue hover:underline underline-offset-8 ">
           <a href="#">Soluciones</a>
         </li>
         <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Nosotros</a>
         </li>
         <li className="hover:text-lightBlue hover:underline underline-offset-8">
-          <a href="#">Talentos</a>
-        </li>
-        <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Insigths</a>
-        </li>
-        <li className="hover:text-lightBlue hover:underline underline-offset-8">
-          <a href="#">Clientes</a>
         </li>
         <li className="hover:text-lightBlue hover:underline underline-offset-8">
           <a href="#">Contacto</a>

@@ -26,7 +26,7 @@ export default {
     },
 
     animation: {
-      blob:"blob 20s infinite"
+      blob:"blob 10s infinite"
     },
 
     keyframes: {
