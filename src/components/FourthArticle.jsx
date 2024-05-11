@@ -1,14 +1,16 @@
-import { Animacion } from "../components/Animacion";
+
 
 export const FourthArticle = () => {
   return (
     <div>
-      <div className="relative w-full mx-auto xl:h-[300px] xl:flex flex-col xl:justify-center xl:items-center  ">
+      <div className="relative w-full h-[600px] mx-auto px-20 justify-center items-center xl:h-[300px] xl:flex xl:flex-col ">
 
 
-        <div className="flex h-36 xl:flex xl:justify-center xl:items-center">
-          <div className=" space-x-16 flex items-baseline py-6 text-xs text-center">
-            <div className="w-40 flex flex-col items-center justify-center ">
+        <div className="h-[500px] flex flex-col justify-center items-center xl:h-[150px]">
+          <div className="flex flex-col items-center justify-center text-xs text-center xl:flex xl:justify-center xl:space-x-16 xl:items-baseline xl:flex-row">
+            
+            
+            <div className="h-[100px] xl:w-40 flex flex-col items-center justify-center ">
               <span className="text-[50px] font-abc2 font-bold text-skyBlue">
                 93%
               </span>
@@ -18,7 +20,7 @@ export const FourthArticle = () => {
               </span>
             </div>
 
-            <div className="w-40 flex flex-col items-center justify-center ">
+            <div className="h-[100px] xl:w-40 flex flex-col items-center justify-center ">
               <span className="text-[50px] font-abc2 font-bold text-skyBlue">
                 +50
               </span>
@@ -28,7 +30,7 @@ export const FourthArticle = () => {
               </span>
             </div>
 
-            <div className="w-40 flex flex-col items-center justify-center ">
+            <div className="h-[100px] xl:w-40 flex flex-col items-center justify-center ">
               <span className="text-[50px] font-abc2 font-bold text-skyBlue">
                 +15
               </span>
@@ -38,7 +40,7 @@ export const FourthArticle = () => {
               </span>
             </div>
 
-            <div className="w-40 flex flex-col items-center justify-center ">
+            <div className="h-[100px] xl:w-40 flex flex-col items-center justify-center ">
               <span className="text-[50px] font-abc2 font-bold text-skyBlue">
                 5
               </span>
@@ -53,9 +55,9 @@ export const FourthArticle = () => {
 
         <button
             onClick="#"
-            className="mt-4 font-abc2 h-[40px] items-center rounded-full bg-blue text-white text-[16px] xl:w-[470px] hover:bg-gradient-to-r from-skyBlue to-lightBlue"
+            className="mt-5 font-abc2 h-[60px] items-center rounded-full bg-blue px-2 text-white text-[15px] hover:bg-gradient-to-r from-skyBlue to-lightBlue xl:text-[16px] xl:w-[410px] xl:h-[40px]"
           >
-            ¿Queremos demostrarte lo que podemos hacemos?
+            Queremos demostrarte lo que podemos hacer
           </button>
 
 

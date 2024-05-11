@@ -2,7 +2,7 @@ import { Animacion } from "../components/Animacion";
 
 export const ThirdArticle = () => {
   return (
-    <div className="relative mx-auto w-full h-[800px] xl:h-[550px] xl:flex xl:justify-center xl:items-center">
+    <div className="relative mx-auto w-full h-[800px] xl:h-[540px] xl:flex xl:justify-center xl:items-center">
       <div className="absolute xl:w-[400px] xl:h-[400px] xl:top-5 xl:left-16">
         <Animacion />
       </div>
