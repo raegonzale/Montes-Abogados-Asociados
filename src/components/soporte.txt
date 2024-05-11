@@ -1,0 +1,85 @@
+export const FourthArticle = () => {
+  return (
+    <div>
+      <div className="flex overflow-hidden space-x-16 group">
+        <div className="space-x-16 flex py-6 text-xs text-center text-skyBlue animate-loop-scroll group-hover:paused">
+          
+          
+          <div className="my-auto">
+            <span className="text-xl font-extrabold text-skyBlue">93%</span>
+            <br />
+            <span className="text-xs text-skyBlue">
+              Disminución en litigios laborales
+            </span>
+          </div>
+
+          <div className="my-auto">
+            <span className="text-xl font-extrabold text-skyBlue">93%</span>
+            <br />
+            <span className="text-xs text-skyBlue">
+              Disminución en litigios laborales
+            </span>
+          </div>
+
+          <div className="my-auto">
+            <span className="text-xl font-extrabold text-skyBlue">93%</span>
+            <br />
+            <span className="text-xs text-skyBlue">
+              Disminución en litigios laborales
+            </span>
+          </div>
+
+          <div className="my-auto">
+            <span className="text-xl font-extrabold text-skyBlue">93%</span>
+            <br />
+            <span className="text-xs text-skyBlue">
+              Disminución en litigios laborales
+            </span>
+          </div>
+
+
+
+        </div>
+
+        <div className="space-x-16 flex py-6 text-xs text-center text-skyBlue animate-loop-scroll group-hover:paused"
+          aria-hidden="true"
+        >
+          <div className="my-auto">
+            <span className="text-xl font-extrabold text-skyBlue">93%</span>
+            <br />
+            <span className="text-xs text-skyBlue">
+              Disminución en litigios laborales
+            </span>
+          </div>
+
+          <div className="my-auto">
+            <span className="text-xl font-extrabold text-skyBlue">93%</span>
+            <br />
+            <span className="text-xs text-skyBlue">
+              Disminución en litigios laborales
+            </span>
+          </div>
+
+          <div className="my-auto">
+            <span className="text-xl font-extrabold text-skyBlue">93%</span>
+            <br />
+            <span className="text-xs text-skyBlue">
+              Disminución en litigios laborales
+            </span>
+          </div>
+
+          <div className="my-auto">
+            <span className="text-xl font-extrabold text-skyBlue">93%</span>
+            <br />
+            <span className="text-xs text-skyBlue">
+              Disminución en litigios laborales
+            </span>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  );
+};

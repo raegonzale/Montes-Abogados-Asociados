@@ -26,7 +26,8 @@ export default {
     },
 
     animation: {
-      blob:"blob 10s infinite"
+      blob:"blob 5s infinite",
+      "loop-scroll":"loop-scroll 6s linear infinite"
     },
 
     keyframes: {
@@ -44,8 +45,18 @@ export default {
           transform:"translate(0px, 0px) scale(1)"
         },
       },
+      "loop-scroll":{
+        from:{ transform: "translateX(-100%)" },
+        to:{transform: "translateX(250%)"},
+      }
+
+
     },
     
+
+
+
+
   },
   plugins: [],
 }

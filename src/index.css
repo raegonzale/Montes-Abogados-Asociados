@@ -12,5 +12,8 @@
     .animation-delay-4000 {
         animation-delay: 5s;
     }
+    .paused {
+        animation-play-state:paused;
+    }
 
 }

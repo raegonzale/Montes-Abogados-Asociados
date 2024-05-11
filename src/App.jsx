@@ -2,6 +2,7 @@ import { Header } from "./components/Header"
 import {PrincipalArticle} from "./components/PrincipalArticle"
 import { SecondArticle } from "./components/SecondArticle"
 import { ThirdArticle } from "./components/ThirdArticle"
+import { FourthArticle } from "./components/FourthArticle"
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
     <ThirdArticle/>
 
     <SecondArticle />
+
+    <FourthArticle />
 
    </main>
  )  

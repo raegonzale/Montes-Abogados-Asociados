@@ -35,7 +35,7 @@ export const Header = () => {
         <img src={logoBlanco} alt="Logo principal Blanco" />
       </div>
 
-      <ul className=" font-abc2 text-white text-[14px] xl:h-[34px] xl:w-[600px] hidden xl:flex xl:mx-24 xl:text-[15px] xl:items-center xl:place-content-around xl:justify-aroun xl:px-16">
+      <ul className=" font-abc2 text-white text-[14px] xl:h-[34px] xl:w-[600px] hidden xl:flex xl:mx-24 xl:text-[15px] xl:items-center xl:place-content-around xl:justify-aroun">
         <li className="hover:text-lightBlue hover:underline underline-offset-8 ">
           <a href="#">Soluciones</a>
         </li>

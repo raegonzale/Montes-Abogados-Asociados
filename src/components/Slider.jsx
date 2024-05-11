@@ -15,12 +15,12 @@ export const Slider = () => {
       <Swiper
         breakpoints={{
           340: {
-            slidesPerView: 1.1,
+            slidesPerView: 1.2,
             spaceBetween: 1,
           },
           640: {
             slidesPerView: 2.3,
-            spaceBetween: 20,
+            spaceBetween: 5,
           },
           1024: {
             slidesPerView: 3.1,
@@ -40,7 +40,7 @@ export const Slider = () => {
                 style={{ backgroundImage: `url(${item.backgroundImage})` }}
               />
               <div className="absolute inset-0 bg-skyBlue opacity-10 mix-blend-multiply rounded-xl group-hover:opacity-80" />
-              <div className="relative p-2 pt-[215px] flex flex-col">
+              <div className="relative p-2 xl:pt-[215px] flex flex-col pt-[185px]">
                 <div className="h-[30px] text-center place-content-center text-[15px] font-bold text-skyBlue font-abc2 bg-white bg-opacity-80 bg-mix-blend-multiply rounded-lg ">
                   {item.title}
                 </div>
