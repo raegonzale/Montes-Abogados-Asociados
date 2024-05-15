@@ -1,5 +1,5 @@
 //Componente con el articulo principal de la pagina//
-import video from "../assets/video/video.mp4";
+import video from "../../../assets/video/video.mp4";
 
 export const PrincipalArticle = () => {
   return (

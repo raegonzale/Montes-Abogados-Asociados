@@ -1,4 +1,4 @@
-import { Animacion } from "../components/Animacion";
+import { Animacion } from "../../common/Animacion";
 
 export const ThirdArticle = () => {
   return (

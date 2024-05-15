@@ -1,8 +1,8 @@
-import logo from "../assets/logos/logo.png";
-import logoBlanco from "../assets/logos/logoBlanco.png";
-import { DarkMode } from "../assets/icons/DarkMode.jsx";
-import { Language } from "../assets/icons/Language.jsx";
-import { MenuMobile } from "../assets/icons/MenuMobile.jsx";
+
+import logoBlanco from "../../../assets/logos/logoBlanco.png";
+import { DarkMode } from "../../../assets/icons/DarkMode.jsx";
+import { Language } from "../../../assets/icons/Language.jsx";
+import { MenuMobile } from "../../../assets/icons/MenuMobile.jsx";
 import { useState } from "react";
 import { useEffect } from "react";
 
