@@ -28,8 +28,8 @@ export const PrincipalArticle = () => {
           </article>
           <button
             onClick="#"
-            className="mt-7 font-abc2 h-[40px] items-center rounded-full bg-blue text-white text-[16px] xl:w-[170px] hover:bg-none hover:bg-mix-blend-multiply hover:bg-opacity-5 hover:border hover:border-white"
-          >
+            className="mt-7 fonabc2 h-[40px] items-center rounded-full bg-blue text-white text-[16px] xl:w-[170px] hover:bg-none hover:bg-mix-blend-multiply hover:bg-opacity-5 hover:border hover:border-white"
+          >t-
             ¿Comenzamos?
           </button>
         </div>

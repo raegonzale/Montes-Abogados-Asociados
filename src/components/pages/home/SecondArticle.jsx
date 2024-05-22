@@ -7,7 +7,7 @@ export const SecondArticle = () => {
         <div className="leading-none font-abc2 font-extrabold text-blue text-[45px] text-center">
           ¿Como lo hacemos?
         </div>
-        <div className="xl:w-[500px] leading-tight font-abc2 text-skyBlue text-[20px] text-center xl:mt-2">
+        <div className="xl:w-[500px] leading-tight font-abc2 text-skyBlue text-[18px] text-center xl:mt-2">
           El secreto está en nuestra experiencia, especialización y acompañamiento cercano en áreas como:   
         </div>
       </div>

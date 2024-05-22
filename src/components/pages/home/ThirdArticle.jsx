@@ -11,7 +11,7 @@ export const ThirdArticle = () => {
         <p className="z-10 leading-none my-2 text-center xl:w-[480 px] font-abc2 text-skyBlue font-extrabold text-[45px] xl:text-left xl:my-0">
           Nuestras soluciones innovadoras{" "}
         </p>
-        <p className="z-10 leading-tight my-2 text-center xl:w-[480 px] font-abc2 text-skyBlue text-[20px] xl:text-left xl:my-0 xl:pt-3 ">
+        <p className="z-10 leading-tight my-2 text-center xl:w-[480 px] font-abc2 text-skyBlue text-[18px] xl:text-left xl:my-0 xl:pt-3 ">
           {" "}
           han llevando sus negocios a un nuevo nivel de eficiencia y seguridad
           juridica.{" "}
