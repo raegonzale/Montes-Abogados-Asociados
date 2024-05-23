@@ -1,9 +1,8 @@
 
-
 export const FourthArticle = () => {
   return (
     <div>
-      <div className="relative w-full h-[600px] mx-auto px-20 justify-center items-center xl:h-[300px] xl:flex xl:flex-col ">
+      <div className="relative w-full h-[600px] mx-auto px-20 justify-center items-center xl:h-[300px] xl:flex xl:flex-col">
 
 
         <div className="h-[500px] flex flex-col justify-center items-center xl:h-[150px]">
@@ -51,11 +50,10 @@ export const FourthArticle = () => {
             </div>
           </div>
         </div>
-
-
+  
         <button
             onClick="#"
-            className="mt-5 font-abc2 h-[60px] items-center rounded-full bg-blue px-2 text-white text-[15px] hover:bg-gradient-to-r from-skyBlue to-lightBlue xl:text-[16px] xl:w-[410px] xl:h-[40px]"
+            className="mt-5 font-abc2 h-[60px] items-center rounded-full bg-blue px-3 text-white text-[13px] hover:bg-gradient-to-r from-skyBlue to-lightBlue xl:text-[16px] xl:w-[410px] xl:h-[40px]"
           >
             Queremos demostrarte lo que podemos hacer
           </button>
