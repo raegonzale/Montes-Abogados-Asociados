@@ -1,11 +1,12 @@
 //Componente con el articulo principal de la pagina//
 import video from "../../../assets/video/video.mp4";
+import { Link } from "react-router-dom";
 
 export const PrincipalArticle = () => {
   return (
     <div>
       <div className="h-[600px] relative xl:flex xl:justify-center">
-        Fondo del articulo princilal compuesta por el video y una capa filtro
+        Fondo del articulo principal compuesta por el video y una capa filtro
         para lograr un efecto oscuro
         <video
           muted
@@ -26,12 +27,19 @@ export const PrincipalArticle = () => {
             soluciones jurídicas y de gestión, enfocadas en fortalecer el
             desarrollo, competitividad y eficiencia de tu negocio.
           </article>
+          
+          <Link to="footer">
+          
           <button
             onClick="#"
             className="mt-7 fonabc2 h-[40px] items-center rounded-full bg-blue text-white text-[16px] xl:w-[170px] hover:bg-none hover:bg-mix-blend-multiply hover:bg-opacity-5 hover:border hover:border-white"
           >
             ¿Comenzamos?
           </button>
+
+          </Link>
+
+
         </div>
       </div>
     </div>
