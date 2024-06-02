@@ -15,12 +15,12 @@ export default {
       
       "white": "#ffffff",
       "skyBlue":"#043166",
-      "blue":"#0189DD",
+      "blue":"#1976d2",
       "lightBlue":"#00D1FF",
-      "darkBlue":"#051A39",
+      "darkBlue":"#3196F3",
       "blueBg":"EDFBFF",
       "red":"#FF0000",
-      "grey":"#C2C2C2",
+      "grey":"#f5f5f5",
 
       
     },

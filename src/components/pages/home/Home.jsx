@@ -6,17 +6,13 @@ import { FourthArticle } from "./FourthArticle"
 import { Contact } from "../../common/Contact"
 import { Footer } from "../../common/Footer"
 
-
-
-
-
 export const Home = () => {
   return (
     <div>
     <Header/>
     <PrincipalArticle/>
-    <ThirdArticle/>
     <SecondArticle/>
+    <ThirdArticle/>    
     <FourthArticle/>
     <Contact/>
     <Footer/>

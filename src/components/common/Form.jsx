@@ -9,12 +9,19 @@ export const Form = () => {
       name: "",
       lastName: "",
       email: "",
+      number:"",
     },
 
     validationSchema: Yup.object({
       name: Yup.string().required("Debes ingresar el nombre"),
       lastName: Yup.string().required("Debes ingresar tus apellidos"),
       email: Yup.string().required("Debes ingresar tu email"),
+      number: Yup.string().required("Debes ingresar tu numero celular")
+      .matches(/^[0-9]{10}$/, {
+        message: "Debes ingresar un numero de 10 digitos (301+1234567)",
+      }),
+
+     
     }),
 
     onSubmit: (data) => {
@@ -56,7 +63,7 @@ export const Form = () => {
                 name="name"
                 fullWidth
                 variant="filled"
-                label="Escribe tu nombre"
+                label="Digita tu nombre"
                 type="text"
                 onChange={formik.handleChange}
                 value={formik.values.name}
@@ -70,7 +77,7 @@ export const Form = () => {
                 name="lastName"
                 fullWidth
                 variant="filled"
-                label="Escribe tus apellidos"
+                label="Digita tu apellido"
                 type="text"
                 onChange={formik.handleChange}
                 value={formik.values.lastName}
@@ -79,7 +86,7 @@ export const Form = () => {
               />
             </Grid>
 
-            <Grid item xs={12} lg={12}>
+            <Grid item xs={12} lg={6}>
               <TextField
                 name="email"
                 fullWidth
@@ -93,7 +100,21 @@ export const Form = () => {
               />
             </Grid>
 
-            <Grid item xs={5} lg={5}>
+            <Grid item xs={12} lg={6}>
+              <TextField
+                name="number"
+                fullWidth
+                variant="filled"
+                label="Digita tu número celular"
+                type="string"
+                onChange={formik.handleChange}
+                value={formik.values.number}
+                error={formik.errors.number}
+                helperText={formik.errors.number}
+              />
+            </Grid>
+
+            <Grid item xs={6} lg={6}>
               <Button
                 type="submit"
                 fullWidth
