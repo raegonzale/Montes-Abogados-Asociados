@@ -5,41 +5,101 @@ import intelectual from '../assets/images/intelectual.jpg';
 import laboral from '../assets/images/laboral.jpg';
 import societario from '../assets/images/societario.jpg';
 
+
 export const ServiceData = [
     {
+        id: 1,
         title: "Recursos Humanos",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        backgroundImage: adminRH
+        backgroundImage: adminRH,
+        
+
     },
 
-    {
+    {   
+        id: 2,
         title: "Recaudo de Cartera",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        backgroundImage: cartera
+        backgroundImage: cartera,
+       
     },
 
     {
+        id: 3,
         title: "Derecho Comercial",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        backgroundImage: comercial
+        backgroundImage: comercial,
+       
     },
 
     {
+        id: 4,
         title: "Propiedad Intelectual",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        backgroundImage: intelectual
+        backgroundImage: intelectual,
+        
     },
 
     {
+        id: 5,
         title: "Derecho Laboral",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        backgroundImage: laboral
+        backgroundImage: laboral,
+        
     },
 
     {
+        id: 6,
         title: "Derecho Societario",
         content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        backgroundImage: societario
+        backgroundImage: societario,
+        
     }
+
+]
+
+export const ProfileData = [
+
+{
+    id: 1,
+    name: "Claudia Montes",
+    profile: "Directora General",
+    backgroundImage: societario,
+    linkedin:"",
+},
+{
+    id: 2,
+    name: "Luis Carlos Lopez",
+    profile: "Asociado",
+    backgroundImage: societario,
+    linkedin:"",
+},
+{
+    id: 3,
+    name: "Luisa Bernal",
+    profile: "Asociada",
+    backgroundImage: societario,
+    linkedin:"",
+},
+{    id: 4,
+    name: "Nancy Paternina",
+    profile: "Administrativa",
+    backgroundImage: societario,
+    linkedin:"",},
+{
+    id: 5,
+    name: "Raul Gonzalez",
+    profile: "Lider Proyectos",
+    backgroundImage: societario,
+    linkedin:"",
+},
+{
+    id: 6,
+    name: "Diego Gonzalez",
+    profile: "Marketing",
+    backgroundImage: societario,
+    linkedin:"",
+
+},
 
 ]

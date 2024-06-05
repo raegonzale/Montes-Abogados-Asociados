@@ -49,7 +49,7 @@ export const Form = () => {
   });
 
   return (
-    <div className="w-full h-[300px] mx-auto px-6 flex items-center justify-center bg-white bg-opacity-10">
+    <div className="w-full h-[370px] xl:h-[300px] mx-auto px-6 flex items-center justify-center bg-white bg-opacity-10">
       <div className=" h-[200px] mx-auto px-6 flex items-center xl:w-[800px]">
         <form action="" onSubmit={formik.handleSubmit}>
           <Grid

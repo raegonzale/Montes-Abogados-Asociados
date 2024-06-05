@@ -4,9 +4,9 @@ import Button from '@mui/material/Button';
 export const FourthArticle = () => {
   return (
     <div>
-      <div className="relative w-full h-[600px] mx-auto px-20 justify-center items-center xl:h-[300px] xl:flex xl:flex-col">
+      <div className="relative w-full h-[600px] mx-auto px-6 xl:px-20 justify-center items-center xl:h-[300px] xl:flex xl:flex-col">
 
-      <div className="absolute xl:w-[400px] xl:h-[400px] xl:top-[-150px] xl:end-[35px]">
+      <div className="absolute left-1 xl:w-[400px] xl:h-[400px] xl:top-[-150px] xl:left-[800px]">
         <Animacion />
       </div>
 
@@ -56,7 +56,7 @@ export const FourthArticle = () => {
           </div>
         </div>
 
-          <Button className=" w-100" variant="contained">Queremos demostrarte lo que podemos hacer</Button>
+          <Button className="max-w-100" variant="contained">Queremos demostrarte lo que podemos hacer</Button>
 
       </div>
 

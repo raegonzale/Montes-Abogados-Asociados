@@ -9,7 +9,7 @@ export const Soluciones = () => {
       <HeaderTwo/>
       <Servicios/>
       <Contact/>
-    <Footer/>
+      <Footer/>
 
     
       

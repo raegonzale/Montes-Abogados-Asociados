@@ -1,5 +1,5 @@
 import logoBlanco from "../../assets/logos/logoBlanco.png";
-import { DarkMode } from "../../assets/icons/DarkMode.jsx";
+import {DarkMode } from "../../assets/icons/DarkMode.jsx";
 import { MenuMobile } from "../../assets/icons/MenuMobile.jsx";
 import { Link } from "react-router-dom";
 
