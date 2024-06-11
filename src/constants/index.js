@@ -65,41 +65,38 @@ export const ProfileData = [
     name: "Claudia Montes",
     profile: "Directora General",
     backgroundImage: societario,
-    linkedin:"",
+    linkedin:"https://www.linkedin.com/in/raulgonzalez-software-developer/",
 },
-{
-    id: 2,
-    name: "Luis Carlos Lopez",
-    profile: "Asociado",
-    backgroundImage: societario,
-    linkedin:"",
-},
-{
-    id: 3,
-    name: "Luisa Bernal",
-    profile: "Asociada",
-    backgroundImage: societario,
-    linkedin:"",
-},
-{    id: 4,
+
+{    id: 2,
     name: "Nancy Paternina",
     profile: "Administrativa",
     backgroundImage: societario,
-    linkedin:"",},
+    linkedin:"https://www.linkedin.com/in/raulgonzalez-software-developer/",},
+
+{
+    id: 3,
+    name: "Luis Carlos Lopez",
+    profile: "Asociado",
+    backgroundImage: societario,
+    linkedin:"https://www.linkedin.com/in/raulgonzalez-software-developer/",
+},
+
 {
     id: 5,
     name: "Raul Gonzalez",
     profile: "Lider Proyectos",
     backgroundImage: societario,
-    linkedin:"",
+    linkedin:"https://www.linkedin.com/in/raulgonzalez-software-developer/",
 },
-{
-    id: 6,
-    name: "Diego Gonzalez",
-    profile: "Marketing",
-    backgroundImage: societario,
-    linkedin:"",
 
+{
+    id: 5,
+    name: "Raul Gonzalez",
+    profile: "Lider Proyectos",
+    backgroundImage: societario,
+    linkedin:"https://www.linkedin.com/in/raulgonzalez-software-developer/",
 },
+
 
 ]

@@ -5,13 +5,13 @@ export const Contact = () => {
   return (
     <div>
       <div
-        className="relative w-full mx-auto bg-cover bg-center h-screen  "
+        className="relative w-full mx-auto bg-cover bg-center h-screen xl:h-[500px]  "
         style={{ backgroundImage: `url(${ondas})` }}
       >
         <div className="absolute top-0 left-0 w-full h-full object-cover bg-skyBlue mix-blend-multiply opacity-90"></div>
 
         <div className="relative h-full flex flex-col justify-evenly items-center">
-          <article className="pt-6 px-6 xl:mt-28 text-[50px] text-center text-white leading-none font-abc2 font-black xl:w-[700px] xl:text-[70px] ">
+          <article className=" pt-6 px-6 text-[50px] text-center text-white leading-none font-abc2 font-black xl:w-[700px] xl:mt-20 xl:mb-8 xl:text-[65px] xl:pt-0 ">
             ¿Listo para llevar tu empresa a un nuevo nivel de eficiencia y
             seguridad juridica?
           </article>

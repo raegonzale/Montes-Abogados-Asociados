@@ -1,4 +1,5 @@
-import { Slider } from "../../common/Slider";
+import { SliderServices } from "./SliderServices";
+
 
 export const SecondArticle = () => {
   return (
@@ -7,13 +8,13 @@ export const SecondArticle = () => {
         <div className=" leading-none font-abc2 font-extrabold text-skyBlue text-[45px] text-center">
           ¿Cómo lo hacemos?
         </div>
-        <div className="my-2 leading-tight font-abc2 text-skyBlue text-[20px] text-center xl:w-[550px]">
+        <div className=" my-2 leading-tight font-abc2 text-skyBlue text-[20px] text-center xl:w-[550px]">
           El secreto está en nuestra experiencia, especialización y
           acompañamiento cercano en áreas como:
         </div>
       </div>
       <div className="mt-14 xl:mt-1">
-        <Slider />
+        <SliderServices/>
       </div>
     </div>
   );
