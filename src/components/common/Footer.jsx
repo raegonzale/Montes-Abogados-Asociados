@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <div className="w-full h-[1100px] mx-auto py-6 flex flex-col items-center px-6 bg-grey text-blue font-abc2 xl:grid xl:grid-cols-4 xl:h-[570px] xl:px-24 xl:pt-[250px] xl:gap-x-6 xl:gap-y-2 xl:items-start">
+    <div className="w-full h-[800px] mx-auto py-6 flex flex-col items-center px-6 bg-grey text-blue font-abc2 xl:grid xl:grid-cols-4 xl:h-[400px] xl:px-24 xl:pt-[50px] xl:gap-x-6 xl:gap-y-2 xl:items-start">
       <div className="flex flex-col justify-between items-center xl:max-w-[400px] xl:col-span-2 xl:flex xl:flex-col xl:items-start">
         <div className="max-w-[50px] py-2">
           <Link to="/">
@@ -38,7 +38,7 @@ export const Footer = () => {
         </ul>
       </div>
 
-      <div className="text-center py-2 text-[16px]">
+      <div className="text-center py-2 text-[16px] xl:text-left">
         <p className="font-black underline text-[18px] text-skyBlue">
           Contactanos
         </p>
@@ -50,7 +50,7 @@ export const Footer = () => {
         <p>claudia@montes-a.com</p>
       </div>
 
-      <div className="items-center col-span-2 col-start-3 xl:flex xl:flex-row  xl:justify-end">
+      <div className="items-center col-span-2 col-start-3 xl:flex xl:flex-row xl:justify-end">
         <IconButton
           sx={{ color: blue[700] }}
           size="large"

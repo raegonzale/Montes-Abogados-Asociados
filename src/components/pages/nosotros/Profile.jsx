@@ -20,9 +20,9 @@ export const Profile = () => {
 
   return (
     <div className="w-full mx-auto flex justify-center items center">
-      <div className="xl:my-5 xl:h-[800px] xl:w-[800px] xl:grid xl:grid-cols-3 xl:items-center xl:justify-items-center">
+      <div className="xl:my-5 xl:h-[800px] xl:w-[820px] xl:grid xl:grid-cols-3 xl:items-center xl:justify-items-center">
         {ProfileData.map((item, index) => (
-          <Card className="" sx={{ maxWidth: 230, maxHeight: 400 }} key={index}>
+          <Card className="" sx={{ maxWidth: 270, maxHeight: 400 }} key={index}>
             <CardActionArea className="">
               <CardMedia
                 component="img"

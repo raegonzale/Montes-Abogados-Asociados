@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Pagination from "@mui/material/Pagination";
 import { BlogsContext } from "../../../context/BlogsContext";
-import { Link } from "react-router-dom"; // Importa Link
+import { Link } from "react-router-dom";
 
 export const Blog = () => {
   const dataBlogs = useContext(BlogsContext);
@@ -22,17 +22,18 @@ export const Blog = () => {
   const selectedBlogs = dataBlogs.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="mx-auto flex flex-col items-center xl:h-[1300px] xl:pt-28">
-      <div className="flex flex-col flex-wrap justify-center">
+    <div className="h-[1500px] px-6 pt-32 mx-auto flex flex-col items-center xl:pt-28">
+      <div className="flex flex-col flex-wrap">
         {selectedBlogs.map((blog) => (
-          <Card sx={{ maxWidth: 620, maxHeight: 450, m: 2 }} key={blog.id}>
+          <Card sx={{ maxWidth: 720, maxHeight: 500, m: 2 }} key={blog.id}>
             <Link to={`/insigths/${blog.id}`}  >
             <CardActionArea>
               <CardMedia
                 component="img"
-                sx={{ height: "200px" }}
+                sx={{ height: "250px" }}
                 image={blog.img}
                 alt={blog.title}
+                loading="lazy"
               />
               <CardContent className="text-blue">
                 <Typography

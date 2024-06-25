@@ -1,41 +1,25 @@
-import Button from '@mui/material/Button';
 
 export const History = () => {
   return (
-    <div className="border border-red relative w-full mx-auto flex flex-col justify-center items-center xl:flex xl:flex-col xl:items-center xl:px-24 xl:justify-center xl:pt-32">
-        
-        <div className="border border-blue flex flex-col items-center justify-center ">
-        <div className="border w-[500px]">Nosotros somos y esta es nuestra historia</div>
-        <div className="border w-[550px]"> 
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+    <div className="relative w-full h-full mx-auto flex flex-col justify-center items-center xl:flex xl:flex-col xl:items-center xl:justify-center xl:mt-36 xl:mb-16">
+      <div className="flex flex-col items-center justify-center">
+        <div className="w-[1050px] flex items-center justify-center text-center leading-none font-abc2 font-black text-[40px] text-blue mb-6 xl:text-right xl:pl-20 ">
+          Somos tus aliados para dar seguridad juridica y llevar tu empresa a un
+          nuevo nivel de eficiencia.
+        </div>
+        <div className="w-[1050px] flex flex-col items-center justify-center leading-tight text-center text-[20px] text-skyBlue font-abc2 mb-6 xl:text-right xl:pl-20 ">
+          <p className="xl: mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
           </p>
-          <Button className="xl: mt-20 w-40" variant="contained">¿Comenzamos?</Button>
-          </div>
-        </div>  
-
-        <div>
-            <div>imagen foto del equipo con efecto parallax </div>
         </div>
-
-        <div>
-            
-           <div></div> 
-            <div>carrusel infinito con frase este es nuestro talento</div>
-        </div>
-
-
-
-
-
-
-
-
+      </div>
     </div>
-  )
-}
+  );
+};
