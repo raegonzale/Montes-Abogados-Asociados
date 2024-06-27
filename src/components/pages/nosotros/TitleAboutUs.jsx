@@ -3,7 +3,7 @@
 const TitleAboutUs = () => {
   return (
     <div>
-        <div className="mx-auto w-auto pt-14 px-6 flex justify-items-start xl:justify-left xl:pl-24 xl:pt-0 xl:h-[120px] xl:items-center">
+        <div className="mx-auto w-auto pt-14 px-6 flex justify-items-start xl:justify-left xl:pl-[100px] xl:pt-0 xl:h-[120px] xl:items-center">
       <div className="relative ">
         <div className="absolute pl-8 pt-5 font-abc2 text-[60px] xl:text-[100px] xl:pl-10 text-skyBlue text-opacity-10 font-black">
           Nosotros

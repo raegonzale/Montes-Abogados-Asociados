@@ -5,7 +5,7 @@ import { Footer } from "../../common/Footer"
 import { Profile} from "../../pages/nosotros/Profile"
 import { Form } from "../../common/Form"
 import { Team } from "./Team"
-import { SliderTwo } from "../../common/SliderTwo"
+import { SliderTwo } from "../../pages/nosotros/SliderTwo"
 import TitleAboutUs from "./TitleAboutUs"
 
 

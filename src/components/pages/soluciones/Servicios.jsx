@@ -40,7 +40,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 export const Servicios = () => {
   const [expanded, setExpanded] = React.useState(false);
   const services = useContext(ServiceContext);
-  console.log(services);
+
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -73,7 +73,7 @@ export const Servicios = () => {
         {services.map(
           (
             item,
-            index // Usar los servicios del contexto
+            index 
           ) => (
             <Accordion
               key={index}
