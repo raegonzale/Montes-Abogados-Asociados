@@ -8,7 +8,6 @@ import Typography from "@mui/material/Typography";
 import Accordion from "@mui/material/Accordion";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import { blue, blueGrey } from "@mui/material/colors";
 import { ServiceContext } from "../../../context/ServiceContext";
 import { Link } from "react-router-dom";
@@ -47,12 +46,12 @@ export const Servicios = () => {
   };
 
   return (
-    <div className="relative mx-auto w-full flex flex-col h-[1200px] pt-24 px-6 xl:max-w-[1280px] xl:pt-1 xl:flex xl:flex-row xl:justify-center xl:h-[710px] xl:px-24">
-      <div className="absolute xl:top-[60px] xl:w-[400px] xl:h-[400px] xl:left-[10px]">
+    <div className="relative mx-auto w-full flex flex-col h-[1200px] pt-24 px-6 xl:max-w-[1280px] xl:pt-10 xl:flex xl:flex-row xl:justify-start xl:h-[710px] xl:px-24">
+      <div className="absolute xl:w-[400px] xl:h-[400px] xl:left-[10px]">
         <Animacion />
       </div>
 
-      <div className=" mx-auto xl:pt-20 w-full h-[450px] items-center justify-center ">
+      <div className=" mx-auto w-full h-[450px] items-center justify-center ">
         <div className="w-full h-[450px] flex flex-col justify-evenly items-center xl:w-[500px] xl:h-[300px] xl:relative xl:flex xl:place-content-evenly xl:items-start xl:px-0">
           <p className="z-10 leading-none my-2 text-center font-abc2 text-skyBlue font-extrabold text-[38px] xl:w-[480px] xl:text-[45px] xl:text-left xl:my-0">
             ¿Por qué confiar en nosotros?{" "}
@@ -63,13 +62,15 @@ export const Servicios = () => {
             especializamos en áreas clave para el crecimiento de tu negocio
           </p>
 
+          <Link to="/contacto">
           <Button className="xl:mt-10 w-40" variant="contained">
             ¿Comenzamos?
           </Button>
+          </Link>
         </div>
       </div>
 
-      <div className="relative h-full px-6 py-5 xl:w-[1000px] xl:pt-20 xl:px-0">
+      <div className="relative h-full px-6 py-5 xl:w-[1000px] xl:px-0">
         {services.map(
           (
             item,
@@ -90,9 +91,8 @@ export const Servicios = () => {
                   size="large"
                   aria-label="Account"
                 >
-                  <AccountBalanceIcon fontSize="inherit" />
+                    {item.icon}               
                 </IconButton>
-
                 <Typography
                   className="flex items-center "
                   sx={{ fontSize: "18px", color: blue[700] }}
@@ -104,7 +104,6 @@ export const Servicios = () => {
                 <Typography sx={{ fontSize: "13px", color: blueGrey[900] }}>
                   {item.abstract}
                 </Typography>
-
                 <Link to={`/soluciones/${item.id}`}>
                   <Button>Conocer más</Button>
                 </Link>

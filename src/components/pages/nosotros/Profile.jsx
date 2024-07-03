@@ -9,21 +9,16 @@ import { ProfileData } from "../../../constants";
 import { blue } from "@mui/material/colors";
 
 export const Profile = () => {
-
-
-
   const handleLinkedInClick = (linkedinURL) => {
     window.open(linkedinURL, '_blank');
 
   };
-  
-
   return (
     <div className="mx-auto flex justify-center items center">
       <div className="mb-5 grid grid-cols-1 gap-5 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3">
         {ProfileData.map((item, index) => (
           <Card className="" sx={{ maxWidth: 270, maxHeight: 400 }} key={index}>
-            <CardActionArea className="">
+            <CardActionArea>
               <CardMedia
                 component="img"
                 sx={{ height: "280px" }}

@@ -7,22 +7,23 @@ import { FreeMode, Pagination } from "swiper/modules";
 import Button from "@mui/material/Button";
 import { ServiceContext } from "../../../context/ServiceContext";
 import { Link } from "react-router-dom";
-
+import useTheme from "../../../constants/useTheme.js";
 
 export const SliderServices = () => {
   const serviceData = useContext(ServiceContext);
+  const { theme } = useTheme();
   const [isDragging, setIsDragging] = useState(false);
 
-  const handleMouseDown = (e) => {
+  const handleMouseDown = () => {
     setIsDragging(true);
   };
 
-  const handleMouseUp = (e) => {
+  const handleMouseUp = () => {
     setIsDragging(false);
   };
 
   return (
-    <div className="mt-1 py-1">
+    <div className="mt-1 py-1" style={{ backgroundColor: theme.background }}>
       <Swiper
         breakpoints={{
           340: {
@@ -51,7 +52,7 @@ export const SliderServices = () => {
           <SwiperSlide key={item.id}>
             <div className="flex flex-col gap-4 group relative rounded-xl px-2 pt-1 w-[200px] h-[250px] lg:w-[250px] lg:h-[200px] xl:w-[240px] xl:h-[300px]">
               <div
-                className={`absolute inset-0 bg-cover bg-center rounded-xl shadow-sm shadow-grey ${
+                className={`absolute inset-0 bg-cover bg-center rounded-xl ${
                   isDragging ? "cursor-grabbing" : "cursor-grab"
                 }`}
                 style={{ backgroundImage: `url(${item.backgroundImage})` }}
@@ -60,17 +61,16 @@ export const SliderServices = () => {
               />
               <div className="absolute inset-0 bg-blue opacity-5 mix-blend-multiply rounded-xl group-hover:opacity-30" />
               <div className="relative p-2 xl:pt-[235px] items-center flex flex-col pt-[185px]">
-                
-              <Link to={`/soluciones/${item.id}`}>
-                <Button
-                  variant="contained"
-                  size="small"
-                  className="cursor-pointer"
-                >
-                  {item.title}
-                </Button>
+                <Link to={`/soluciones/${item.id}`}>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    className="cursor-pointer"
+                    aria-label="Boton acceso servicios"
+                  >
+                    {item.title}
+                  </Button>
                 </Link>
-
               </div>
             </div>
           </SwiperSlide>

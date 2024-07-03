@@ -1,62 +1,74 @@
-import { Grid, TextField, Button } from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
-import { useFormik } from "formik";
-import * as Yup from "yup";
+
+import { Grid, TextField, Button } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import useTheme from '../../constants/useTheme';
 
 export const Form = () => {
+  const { theme } = useTheme();
+
   const formik = useFormik({
     initialValues: {
-      name: "",
-      lastName: "",
-      email: "",
-      number:"",
+      name: '',
+      lastName: '',
+      email: '',
+      number: '',
     },
-
     validationSchema: Yup.object({
-      name: Yup.string().required("Debes ingresar el nombre"),
-      lastName: Yup.string().required("Debes ingresar tus apellidos"),
-      email: Yup.string().required("Debes ingresar tu email"),
-      number: Yup.string().required("Debes ingresar tu numero celular")
-      .matches(/^[0-9]{10}$/, {
-        message: "Debes ingresar un numero de 10 digitos (301+1234567)",
-      }),
-
-     
+      name: Yup.string().required('Debes ingresar el nombre'),
+      lastName: Yup.string().required('Debes ingresar tus apellidos'),
+      email: Yup.string().required('Debes ingresar tu email'),
+      number: Yup.string()
+        .required('Debes ingresar tu numero celular')
+        .matches(/^[0-9]{10}$/, {
+          message: 'Debes ingresar un numero de 10 digitos (301+1234567)',
+        }),
     }),
-
     onSubmit: (data) => {
       console.log(data);
-      fetch("https://getform.io/f/warkerlb", {
-        method: "POST",
+      fetch('https://getform.io/f/warkerlb', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       })
         .then((response) => {
           if (response.ok) {
-            console.log("Formulario enviado exitosamente!");
-            
+            console.log('Formulario enviado exitosamente!');
             formik.resetForm();
           } else {
-            console.error("Error enviando el formulario");
+            console.error('Error enviando el formulario');
           }
         })
         .catch((error) => {
-          console.error("Error:", error);
+          console.error('Error:', error);
         });
     },
   });
 
   return (
-    <div className="w-full h-[370px] xl:h-[300px] mx-auto px-6 flex items-center justify-center bg-white bg-opacity-10">
-      <div className=" h-[200px] mx-auto px-6 flex items-center xl:w-[800px]">
+    <div
+      style={{
+        backgroundColor: theme.background,
+        color: theme.textPrimary,
+        
+      }}
+      className="w-full h-[400px] mx-auto px-6 flex items-center justify-center xl:h-[300px]"
+    >
+      <div
+        style={{
+          backgroundColor: theme.background,
+        }}
+        className="h-[200px] mx-auto px-6 flex items-center xl:w-[800px]"
+      >
         <form action="" onSubmit={formik.handleSubmit}>
           <Grid
             container
             spacing={2}
-            justifyContent={"center"}
-            alignItems={"center"}
+            justifyContent={'center'}
+            alignItems={'center'}
           >
             <Grid item xs={12} lg={6}>
               <TextField
@@ -67,8 +79,21 @@ export const Form = () => {
                 type="text"
                 onChange={formik.handleChange}
                 value={formik.values.name}
-                error={formik.errors.name}
+                error={Boolean(formik.errors.name)}
                 helperText={formik.errors.name}
+                style={{
+                  backgroundColor: theme.form,
+                }}
+                InputProps={{
+                  style: {
+                    color: theme.textPrimary,
+                  },
+                }}
+                InputLabelProps={{
+                  style: {
+                    color: theme.textPrimary,
+                  },
+                }}
               />
             </Grid>
 
@@ -81,8 +106,21 @@ export const Form = () => {
                 type="text"
                 onChange={formik.handleChange}
                 value={formik.values.lastName}
-                error={formik.errors.lastName}
+                error={Boolean(formik.errors.lastName)}
                 helperText={formik.errors.lastName}
+                style={{
+                  backgroundColor: theme.form,
+                }}
+                InputProps={{
+                  style: {
+                    color: theme.textPrimary,
+                  },
+                }}
+                InputLabelProps={{
+                  style: {
+                    color: theme.textPrimary,
+                  },
+                }}
               />
             </Grid>
 
@@ -95,8 +133,22 @@ export const Form = () => {
                 type="email"
                 onChange={formik.handleChange}
                 value={formik.values.email}
-                error={formik.errors.email}
+                error={Boolean(formik.errors.email)}
                 helperText={formik.errors.email}
+                style={{
+                  backgroundColor: theme.form,
+                  
+                }}
+                InputProps={{
+                  style: {
+                    color: theme.textPrimary,
+                  },
+                }}
+                InputLabelProps={{
+                  style: {
+                    color: theme.textPrimary,
+                  },
+                }}
               />
             </Grid>
 
@@ -109,8 +161,23 @@ export const Form = () => {
                 type="string"
                 onChange={formik.handleChange}
                 value={formik.values.number}
-                error={formik.errors.number}
+                error={Boolean(formik.errors.number)}
                 helperText={formik.errors.number}
+
+                style={{
+                  backgroundColor: theme.form,
+                  
+                }}
+                InputProps={{
+                  style: {
+                    color: theme.textPrimary,
+                  },
+                }}
+                InputLabelProps={{
+                  style: {
+                    color: theme.textPrimary,
+                  },
+                }}
               />
             </Grid>
 
@@ -119,7 +186,9 @@ export const Form = () => {
                 type="submit"
                 fullWidth
                 variant="contained"
+                aria-label="Enviar formulario"
                 endIcon={<SendIcon />}
+
               >
                 Enviar
               </Button>

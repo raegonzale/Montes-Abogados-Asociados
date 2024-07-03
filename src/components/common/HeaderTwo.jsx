@@ -1,79 +1,95 @@
-
-import { MenuMobileBlue } from "../../assets/icons/MenuMobileBlue.jsx";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logos/logo.png"
+import logoBlanco from "../../assets/logos/logoBlanco.png";
+import logo from "../../assets/logos/logo.png";
 import DarkModeButton from "./darkModeButton.jsx";
-import { useState } from "react";
-import { useEffect } from "react";
+import MobileMenu from "./MobileMenu.jsx";
+import { MenuMobile } from "../../assets/icons/MenuMobile.jsx";
+import { MenuMobileBlue } from "../../assets/icons/MenuMobileBlue.jsx";
+import useTheme from "../../constants/useTheme.js";
 
 export const HeaderTwo = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, darkMode } = useTheme();
 
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 80);
+  }, []);
 
-const [scrolled, setScrolled] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 80) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+  const toggleMenu = useCallback(() => {
+    setMenuOpen((prev) => !prev);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener(scroll, handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  const getLogoSrc = () => (darkMode ? logoBlanco : scrolled ? logo : logo);
+
+  const getMobileMenuIcon = () => {
+    if (darkMode) {
+      return MenuMobile;
+    } else {
+      return scrolled ? MenuMobileBlue : MenuMobileBlue;
+    }
+  };
 
   return (
     <header
-    className={`w-full mx-auto justify-center h-[70px] fixed z-20 flex place-content-between items-center transition-all duration-700 ${
-      scrolled ? "bg-white shadow-lg" : "bg-white"
-    }`}
-  >
+      style={{
+        backgroundColor: scrolled ? theme.background : theme.background,
+        color: scrolled ? theme.textPrimary : theme.textPrimary,
+      }}
+      className={`w-full mx-auto justify-center h-[70px] fixed z-20 flex place-content-between items-center transition-all duration-500 ${scrolled ? "bg-white shadow-lg" : ""}`}
+    >
       <div className="xl:w-44 hidden xl:flex">
         <Link to="/">
-          <img src={logo} alt="Logo principal" />
+          <img src={getLogoSrc()} alt="Logo principal Blanco" />
         </Link>
       </div>
-
-      <ul className="font-abc2 font-bold text-skyBlue text-[14px] xl:h-[34px] xl:w-[500px] hidden xl:flex xl:mx-40 xl:text-[15px] xl:items-center xl:place-content-around xl:justify-aroun">
+      <ul className="font-abc2 font-bold text-[14px] xl:h-[34px] xl:w-[500px] hidden xl:flex xl:mx-40 xl:text-[15px] xl:items-center xl:place-content-around xl:justify-around">
         <Link to="/soluciones">
-          <li className="hover:text-blue hover:underline underline-offset-8 ">
+          <li className={`hover:underline underline-offset-8 ${scrolled ? "hover:text-blue" : ""}`}>
             Soluciones
           </li>
         </Link>
-
         <Link to="/nosotros">
-          <li className="hover:text-blue hover:underline underline-offset-8">
+          <li className={`hover:underline underline-offset-8 ${scrolled ? "hover:text-blue" : ""}`}>
             Nosotros
           </li>
         </Link>
-
         <Link to="/insigths">
-          <li className="hover:text-blue hover:underline underline-offset-8">
+          <li className={`hover:underline underline-offset-8 ${scrolled ? "hover:text-blue" : ""}`}>
             Insigths
           </li>
         </Link>
-
         <Link to="/contacto">
-          <li className="hover:text-blue hover:underline underline-offset-8">
+          <li className={`hover:underline underline-offset-8 ${scrolled ? "hover:text-blue" : ""}`}>
             Contacto
           </li>
         </Link>
       </ul>
       <div className="hidden xl:flex">
-      <DarkModeButton/>
+        <DarkModeButton />
       </div>
-      
-      
-      <span className="w-full h-[74px] px-6 py-1 flex items-center justify-between place-content-araund xl:hidden">
-        <img
-          className="w-[160px] "
-          src={logo}
-          alt="Logo"
+      <div className="w-full h-[74px] px-6 py-1 flex items-center justify-between place-content-around xl:hidden">
+        <Link to="/">
+          <img className={`w-[160px] ${scrolled ? "" : "w-[160px]"}`} src={getLogoSrc()} alt="Logo principal" />
+        </Link>
+        <MobileMenu
+          scrolled={scrolled}
+          menuOpen={menuOpen}
+          toggleMenu={toggleMenu}
+          Icon={getMobileMenuIcon()}
+          darkMode={darkMode}
         />
-        <MenuMobileBlue />
-      </span>
+      </div>
     </header>
   );
-}; 
+};
+
+export default HeaderTwo;

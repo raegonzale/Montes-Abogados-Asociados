@@ -12,9 +12,7 @@ const TitleAboutUs = () => {
           Nosotros
         </div>
       </div>
-    </div>
-
-    
+    </div>    
     </div>
   )
 }

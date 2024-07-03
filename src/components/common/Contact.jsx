@@ -3,8 +3,6 @@ import { Parallax, } from 'react-parallax';
 
 import buildings from "../../assets/images/edificios.jpg";
 
-
-
 export const Contact = () => {
   return (
     <div>
@@ -12,7 +10,7 @@ export const Contact = () => {
         
         bgImage={buildings}
         bgImageAlt="background"
-        strength={150}
+        strength={130}
       >
         <div className="relative h-[450px] xl:h-[560px] will-change-transform">
           <div className="absolute w-full h-full bg-skyBlue opacity-40"></div>
