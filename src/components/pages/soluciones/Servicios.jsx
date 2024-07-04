@@ -8,9 +8,9 @@ import Typography from "@mui/material/Typography";
 import Accordion from "@mui/material/Accordion";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import { blue, blueGrey } from "@mui/material/colors";
 import { ServiceContext } from "../../../context/ServiceContext";
 import { Link } from "react-router-dom";
+import useTheme from '../../../constants/useTheme';
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
@@ -37,6 +37,9 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export const Servicios = () => {
+
+  const { theme } = useTheme();
+
   const [expanded, setExpanded] = React.useState(false);
   const services = useContext(ServiceContext);
 
@@ -46,17 +49,19 @@ export const Servicios = () => {
   };
 
   return (
-    <div className="relative mx-auto w-full flex flex-col h-[1200px] pt-24 px-6 xl:max-w-[1280px] xl:pt-10 xl:flex xl:flex-row xl:justify-start xl:h-[710px] xl:px-24">
+    <div style={{ backgroundColor: theme.background, color:theme.textPrimary,}} 
+         className="relative mx-auto w-full flex flex-col h-[1150px] px-6 xl:max-w-[1280px] xl:pt-10 xl:flex xl:flex-row xl:justify-start xl:h-[710px] xl:px-24"
+        >
       <div className="absolute xl:w-[400px] xl:h-[400px] xl:left-[10px]">
         <Animacion />
       </div>
 
       <div className=" mx-auto w-full h-[450px] items-center justify-center ">
         <div className="w-full h-[450px] flex flex-col justify-evenly items-center xl:w-[500px] xl:h-[300px] xl:relative xl:flex xl:place-content-evenly xl:items-start xl:px-0">
-          <p className="z-10 leading-none my-2 text-center font-abc2 text-skyBlue font-extrabold text-[38px] xl:w-[480px] xl:text-[45px] xl:text-left xl:my-0">
+          <p className="z-10 leading-none my-2 text-center font-abc2 font-extrabold text-[38px] xl:w-[480px] xl:text-[45px] xl:text-left xl:my-0">
             ¿Por qué confiar en nosotros?{" "}
           </p>
-          <p className="z-10 leading-tight text-center font-abc2 text-skyBlue text-[20px] xl:w-[480px] xl:text-left xl:mt-0 xl:mb-4 xl:pt-3 ">
+          <p className="z-10 leading-tight text-center font-abc2 text-[20px] xl:w-[480px] xl:text-left xl:mt-0 xl:mb-4 xl:pt-3 ">
             Hacemos un acompañamiento real y cercano a las personas y compañías
             que nos otorgan su voto de confianza al contratarnos. Por nos
             especializamos en áreas clave para el crecimiento de tu negocio
@@ -80,14 +85,15 @@ export const Servicios = () => {
               key={index}
               expanded={expanded === item.id}
               onChange={handleChange(item.id)}
+              style={{ backgroundColor: theme.backgroundAcordion}}
             >
               <AccordionSummary
                 aria-controls={`${item.id}-content`}
                 id={`${item.id}-header`}
-                className="hover:bg-blue hover:bg-opacity-10"
+                className="hover:bg-blue hover:bg-opacity-20"
               >
                 <IconButton
-                  sx={{ color: blue[700] }}
+                  sx={{ color: theme.textSecondary }} //Color icono
                   size="large"
                   aria-label="Account"
                 >
@@ -95,13 +101,19 @@ export const Servicios = () => {
                 </IconButton>
                 <Typography
                   className="flex items-center "
-                  sx={{ fontSize: "18px", color: blue[700] }}
+                  sx={{ fontSize: "18px", color: theme.textSecondary }}// Cambio de color texto
                 >
                   {item.title}
                 </Typography>
               </AccordionSummary>
-              <AccordionDetails>
-                <Typography sx={{ fontSize: "13px", color: blueGrey[900] }}>
+              <AccordionDetails
+              style={{ backgroundColor: theme.backgroundCard}}
+              >
+                <Typography 
+                sx={{ fontSize: "14px", color: theme.textPrimary }} // Cambio de color texto
+                
+                
+                >
                   {item.abstract}
                 </Typography>
                 <Link to={`/soluciones/${item.id}`}>

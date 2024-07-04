@@ -4,7 +4,7 @@ export const TitleSolutions = () => {
   const { theme } = useTheme();
 
   return (
-    <div className='xl:h-[250px] h-[180px]'style={{ background: theme.background }}>
+    <div className=' xl:h-[250px] h-[180px]'style={{ background: theme.background }}>
       <div className="mx-auto w-auto pt-14 px-6 flex justify-items-start xl:justify-left xl:pl-[100px] xl:pt-0 xl:h-[120px] xl:items-center">
         <div className="relative">
           <div

@@ -7,11 +7,13 @@ import Paper from "@mui/material/Paper";
 import { Contact } from "../../common/Contact";
 import { Form } from "../../common/Form";
 import { Footer } from "../../common/Footer";
+import useTheme from "../../../constants/useTheme";
 
 const ServiceDetails = () => {
   const { serviceDataId } = useParams();
   const dataServices = useContext(ServiceContext);
   const [serviceSelected, setServiceSelected] = useState(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const foundService = dataServices.find(
@@ -25,10 +27,12 @@ const ServiceDetails = () => {
   }
 
   return (
-    <div>
+    <div
+      style={{ backgroundColor: theme.background, color: theme.textPrimary }}
+    >
       <HeaderTwo />
 
-      <div className="mx-auto items-center xl:pt-28 xl:pb-20 xl:flex xl:flex-row xl:justify-evenly xl:max-w-[1280px] xl:px-24 ">
+      <div className="mx-auto h-[1000px] flex flex-col justify-center items-center  pt-24 xl:pt-28 xl:pb-20 xl:flex xl:flex-row xl:justify-evenly xl:max-w-[1280px] xl:px-24 ">
         <Box
           sx={{
             display: "flex",
@@ -51,25 +55,22 @@ const ServiceDetails = () => {
           </Paper>
         </Box>
 
-<div className=" xl:pl-16">
+        <div className="border h-[200px] xl:pl-16">
+          <div className="mx-auto w-auto xl:h-[110px]">
+            <div className="relative">
+              <div style={{ color: theme.primary, opacity: 0.2 }} className="absolute pl-5 font-abc2 text-[70px] text-opacity-10 font-black">
+                {serviceSelected.title}
+              </div>
+              <div style={{ color: theme.primary }} className="absolute font-abc2 xl:pt-10 text-[50px] font-black">
+                {serviceSelected.title}
+              </div>
+            </div>
+          </div>
 
-<div className="mx-auto w-auto xl:h-[110px]">
-      <div className="relative">
-        <div className="absolute pl-5 font-abc2 text-[70px] text-blue text-opacity-10 font-black">
-        {serviceSelected.title}
+          <div className="font-abc2 leading-tight xl:text-[20px] xl:pt-5">
+            {serviceSelected.content}
+          </div>
         </div>
-        <div className="absolute font-abc2 xl:pt-10 text-[50px] text-blue font-black">
-        {serviceSelected.title}
-        </div>
-      </div>
-    </div>
-
-        <div className="font-abc2 text-skyBlue leading-tight xl:text-[20px] xl:pt-5">{serviceSelected.content}</div>
-        
-        </div>
-
-
-
       </div>
 
       <Contact />

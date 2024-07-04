@@ -12,17 +12,21 @@ export const ThemeProvider = ({ children }) => {
     ? {
         background: "#0f172a",
         backgroundSecondary:"",
+        backgroundAcordion:"#1e293b",
+        backgroundCard:"#0f172a",
         textPrimary: "#ffffff",
         textSecondary: "#ffffff",
         primary: "#1976d2",
         secondary:"#00D1FF",
-        form:"#020924",
-        footer:"#1976d2",
+        form:"#1e293b",
+        footer:"#1e293b",
         animation1:"#00D1FF",
       }
     : {
         background: "#ffffff",
         backgroundSecondary:"#0f172a",
+        backgroundAcordion:"",
+        backgroundCard:"",
         textPrimary: "#0f172a",
         textSecondary: "#1976d2",
         primary: "#1976d2",

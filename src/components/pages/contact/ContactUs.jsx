@@ -1,5 +1,5 @@
 import { HeaderTwo } from "../../common/HeaderTwo"
-import { Contact } from "../../common/Contact"
+
 import { Footer } from "../../common/Footer"
 import { Form } from "../../common/Form"
 import TitleContact from "./TitleContact"
@@ -12,7 +12,6 @@ const ContactUs = () => {
     <TitleContact/>
     <ContactInformation/>
     <Form/>
-    <Contact/>
     <Footer/>
     </div>
   )

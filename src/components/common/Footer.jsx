@@ -54,7 +54,7 @@ export const Footer = () => {
             <img src={darkMode ? logoCuadradoBlanco : logoCuadrado} alt="Logo principal" />
           </Link>
         </div>
-        <div style={{color:theme.textPrimary}} className="py-2 text-center text-[16px] xl:text-left">
+        <div style={{color:theme.textPrimary}} className="py-2 text-center text-[16px] xl:text-left font-abc2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -63,27 +63,27 @@ export const Footer = () => {
       </div>
 
       <div className="py-2 text-center text-[16px] xl:text-left font-abc2">
-        <ul>
-          <li style={{color:theme.textSecondary}} className="font-black underline text-[18px]">
+        <ul style={{color:theme.textPrimary}}>
+          <li style={{color:theme.primary}} className="font-black underline text-[18px]">
             Mapa del sitio
           </li>
           <Link to="/soluciones">
-            <li className="hover:text-skyBlue">Soluciones</li>
+            <li className="hover:text-blue hover:underline">Soluciones</li>
           </Link>
           <Link to="/nosotros">
-            <li className="hover:text-skyBlue">Nosotros</li>
+            <li className="hover:text-blue hover:underline">Nosotros</li>
           </Link>
           <Link to="/insigths">
-            <li className="hover:text-skyBlue">Insights</li>
+            <li className="hover:text-blue hover:underline">Insights</li>
           </Link>
           <Link to="/contacto">
-            <li className="hover:text-skyBlue">Contacto</li>
+            <li className="hover:text-blue hover:underline">Contacto</li>
           </Link>
         </ul>
       </div>
 
-      <div className="py-2 text-center text-[16px] xl:text-left xl:justify-start font-abc2">
-        <p style={{ color: theme.textSecondary}} className="font-black underline text-[18px]">
+      <div style={{ color: theme.textPrimary}} className="py-2 text-center text-[16px] xl:text-left xl:justify-start font-abc2">
+        <p style={{ color: theme.primary}} className="font-black underline text-[18px]">
           Contáctanos
         </p>
         <p className="font-black">Dirección</p>
@@ -105,7 +105,7 @@ export const Footer = () => {
           >
             <IconButton
               sx={{
-                color: theme.textSecondary,
+                color: theme.primary,
               }}
               size="large"
             >
@@ -116,7 +116,7 @@ export const Footer = () => {
       </div>
 
       <div className="text-center xl:col-span-4">
-        <p className="xl:flex justify-center items-center h-full">
+        <p className="xl:flex justify-center items-center h-full font-abc2">
           Todos los derechos reservados Montes Abogados Asociados S.A.S ©2024
         </p>
       </div>

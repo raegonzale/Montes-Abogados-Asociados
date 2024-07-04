@@ -64,7 +64,7 @@ export const HeaderTwo = () => {
         </Link>
         <Link to="/insigths">
           <li className={`hover:underline underline-offset-8 ${scrolled ? "hover:text-blue" : ""}`}>
-            Insigths
+            Blog
           </li>
         </Link>
         <Link to="/contacto">

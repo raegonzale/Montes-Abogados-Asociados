@@ -7,54 +7,62 @@ import { CardActionArea } from "@mui/material";
 import Pagination from "@mui/material/Pagination";
 import { BlogsContext } from "../../../context/BlogsContext";
 import { Link } from "react-router-dom";
+import useTheme from "../../../constants/useTheme";
 
 export const Blog = () => {
   const dataBlogs = useContext(BlogsContext);
   const [page, setPage] = useState(1);
   const itemsPerPage = 3;
-
+  const { theme } = useTheme();
   const handleChange = (event, value) => {
     setPage(value);
   };
-
-  
   const startIndex = (page - 1) * itemsPerPage;
   const selectedBlogs = dataBlogs.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="h-[1500px] px-6 pt-32 mx-auto flex flex-col items-center xl:pt-28">
+    <div
+      style={{ background: theme.background }}
+      className="h-[1500px] px-6 pt-5 mx-auto flex flex-col items-center xl:h-[1300px] xl:pt-0"
+    >
       <div className="flex flex-col flex-wrap">
         {selectedBlogs.map((blog) => (
           <Card sx={{ maxWidth: 720, maxHeight: 500, m: 2 }} key={blog.id}>
-            <Link to={`/insigths/${blog.id}`}  >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                sx={{ height: "250px" }}
-                image={blog.img}
-                alt={blog.title}
-                loading="lazy"
-              />
-              <CardContent className="text-blue">
-                <Typography
-                  gutterBottom
-                  component="div"
-                  fontSize="16px"
-                  lineHeight="1"
-                  fontWeight="bold"
-                >
-                  {blog.title}
-                </Typography>
-                <Typography className="text-skyBlue" fontSize="14px">
-                  {blog.abstract}
-                </Typography>
-                <Typography className="text-blue text-end" fontSize="11px">
-                  {blog.date}
-                </Typography>
-
-
-              </CardContent>
-            </CardActionArea>
+            <Link to={`/insigths/${blog.id}`}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  sx={{ height: "250px" }}
+                  image={blog.img}
+                  alt={blog.title}
+                  loading="lazy"
+                />
+                <CardContent style={{ background: theme.backgroundAcordion }}>
+                  <Typography
+                    gutterBottom
+                    component="div"
+                    fontSize="20px"
+                    lineHeight="1"
+                    fontWeight="bold"
+                    style={{ color: theme.primary }}
+                  >
+                    {blog.title}
+                  </Typography>
+                  <Typography
+                    style={{ color: theme.textPrimary }}
+                    fontSize="15px"
+                  >
+                    {blog.abstract}
+                  </Typography>
+                  <Typography 
+                    className="flex justify-end"
+                    fontWeight="bold"
+                    style={{ color: theme.primary }} 
+                    fontSize="12px">
+                    {blog.date}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
             </Link>
           </Card>
         ))}
