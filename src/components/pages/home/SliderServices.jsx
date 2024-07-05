@@ -42,7 +42,7 @@ export const SliderServices = () => {
         freeMode={true}
         pagination={{ clickable: true }}
         modules={[FreeMode, Pagination]}
-        className={`max-w-[90%] xl:max-w-[75%] sm:max-w-[90%] ${
+        className={`max-w-[90%] xl:max-w-[86%] sm:max-w-[90%] ${
           isDragging ? "cursor-grabbing" : "cursor-grab"
         }`}
         onMouseDown={handleMouseDown}
@@ -50,16 +50,16 @@ export const SliderServices = () => {
       >
         {serviceData.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="flex flex-col gap-4 group relative rounded-xl px-2 pt-1 w-[200px] h-[250px] lg:w-[250px] lg:h-[200px] xl:w-[240px] xl:h-[300px]">
+            <div className="flex flex-col gap-4 group relative rounded-sm px-2 pt-1 w-[200px] h-[250px] lg:w-[250px] lg:h-[200px] xl:w-[280px] xl:h-[300px]">
               <div
-                className={`absolute inset-0 bg-cover bg-center rounded-xl ${
+                className={`absolute inset-0 bg-cover bg-center rounded-sm ${
                   isDragging ? "cursor-grabbing" : "cursor-grab"
                 }`}
                 style={{ backgroundImage: `url(${item.backgroundImage})` }}
                 onMouseDown={handleMouseDown}
                 onMouseUp={handleMouseUp}
               />
-              <div className="absolute inset-0 bg-blue opacity-5 mix-blend-multiply rounded-xl group-hover:opacity-30" />
+              <div className="absolute inset-0 bg-skyBlue opacity-5 mix-blend-multiply rounded-xl group-hover:opacity-40" />
               <div className="relative p-2 xl:pt-[235px] items-center flex flex-col pt-[185px]">
                 <Link to={`/soluciones/${item.id}`}>
                   <Button

@@ -11,6 +11,7 @@ import ServiceContextProvider from "./context/ServiceContext";
 import ServiceDetails from "./components/pages/soluciones/ServiceDetails";
 import ContactUs from "./components/pages/contact/ContactUs";
 import ScrollToTop from "./components/common/ScrollToTop";
+import FloatingButton from "./components/common/FloatingButton"
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
               <Route path="/insigths/:dataBlogId" element={<BlogDetail />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
+            <FloatingButton/>
           </Router>
         </BlogsContextProvider>
       </ServiceContextProvider>

@@ -12,7 +12,6 @@ export const Home = () => {
     <div>
     <Header/>
     <PrincipalArticle/>
-    
     <SecondArticle/>
     <ThirdArticle/>    
     <FourthArticle/>
