@@ -10,10 +10,10 @@ import CategoryIcon from "@mui/icons-material/Category";
 import Groups3Icon from "@mui/icons-material/Groups3";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
-import DarkModeButton from "./darkModeButton.jsx";
+import DarkModeButton from "./DarkModeButton.jsx";
 import useTheme from '../../constants/useTheme';
 
-const MobileMenu = ({ scrolled, menuOpen, toggleMenu, Icon }) => {
+const MobileMenu = ({ menuOpen, toggleMenu, Icon }) => {
   const { theme } = useTheme();
 
   return (
@@ -26,8 +26,8 @@ const MobileMenu = ({ scrolled, menuOpen, toggleMenu, Icon }) => {
           sx={{
             position: "absolute",
             top: "72px",
-            left: 0,
-            width: "100%",
+            left: 191,
+            width: "55%",
             zIndex: 10,
             backgroundColor: theme.background,
             color: theme.textPrimary,

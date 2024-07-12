@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import useTheme from "../../../constants/useTheme";
-import { SliderServices } from "./SliderServices";
+import SliderServices  from "./SliderServices";
 
 export const SecondArticle = () => {
   const { theme } = useTheme();

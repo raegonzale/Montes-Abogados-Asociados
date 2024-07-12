@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import logoBlanco from "../../assets/logos/logoBlanco.png";
 import logo from "../../assets/logos/logo.png";
-import DarkModeButton from "./darkModeButton.jsx";
+import DarkModeButton from "./DarkModeButton.jsx";
 import MobileMenu from "./MobileMenu.jsx";
 import { MenuMobile } from "../../assets/icons/MenuMobile.jsx";
 import { MenuMobileBlue } from "../../assets/icons/MenuMobileBlue.jsx";
@@ -86,6 +86,7 @@ export const Header = () => {
           toggleMenu={toggleMenu}
           Icon={getMobileMenuIcon()}
           darkMode={darkMode}
+          alt="Menu Mobile"
         />
       </div>
     </header>

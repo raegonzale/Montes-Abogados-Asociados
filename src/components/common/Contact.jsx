@@ -1,6 +1,6 @@
 import { Parallax } from 'react-parallax';
 import { useInView } from "react-intersection-observer";
-import buildings from "../../assets/images/edificios.jpg";
+import buildings from "../../assets/images/edificios.webp";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
@@ -20,6 +20,7 @@ export const Contact = () => {
       });
     }
   }, [controls, inView]);
+
   return (
     <div>
       <Parallax
@@ -27,17 +28,18 @@ export const Contact = () => {
         bgImageAlt="background"
         strength={150}
         style={{ height: '500px' }}
-        bgImageStyle={{ objectFit: 'cover', objectPosition: 'center' }}
-        bgImageSizes="(max-width: 768px) 100vw, 50vw"
+        bgImageStyle={{ objectFit: 'cover', objectPosition: 'center', width: '100%', height: '100%' }}
       >
         <div className="relative h-screen will-change-transform">
-          <div className="absolute w-full h-[500px] bg-skyBlue opacity-40"></div>
+          <div className="absolute inset-0 bg-black opacity-40 mix-blend-multiply"></div> {/* Capa adicional para mix-blend-multiply */}
+          <div className="absolute w-full h-[500px] bg-skyBlue opacity-40 mix-blend-multiply"></div>
           <div className="relative h-[500px] flex flex-col justify-center items-center">
             <motion.article
-                    ref={ref}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={controls}
-            className="px-6 text-[50px] text-center text-white leading-none font-abc2 font-black xl:w-[700px] xl:text-[65px]">
+              ref={ref}
+              initial={{ opacity: 0, y: 20 }}
+              animate={controls}
+              className="px-6 text-[50px] text-center text-white leading-none font-abc2 font-black xl:w-[700px] xl:text-[65px] sm:px-4 sm:text-[30px]"
+            >
               ¿Listo para llevar tu empresa a un nuevo nivel de eficiencia y seguridad jurídica?
             </motion.article>
           </div>

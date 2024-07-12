@@ -14,7 +14,7 @@ export const History = () => {
           nuevo nivel de eficiencia.
         </div>
         <div className="w-full px-6 flex flex-col items-center justify-center leading-tight text-center text-[20px] font-abc2 xl:w-[1050px] xl:text-right xl:pl-20 ">
-          <p className="pb-5">
+          <p className="pb-5 xl:pb-11">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

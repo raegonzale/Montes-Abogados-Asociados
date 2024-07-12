@@ -1,4 +1,4 @@
-import team from "../../../assets/images/aboutUs/team.png";
+import team from "../../../assets/images/aboutUs/team.webp";
 import { Parallax } from "react-parallax";
 
 export const Team = () => {

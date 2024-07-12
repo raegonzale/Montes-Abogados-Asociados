@@ -13,27 +13,27 @@ const socialMediaLinks = [
   {
     label: "Instagram",
     href: "https://www.instagram.com/montesabogadosasoc/",
-    icon: <InstagramIcon fontSize="inherit" />,
+    icon: <InstagramIcon fontSize="inherit" alt="Instagram" />,
   },
   {
     label: "Facebook",
     href: "https://www.facebook.com/profile.php?id=61557949184503",
-    icon: <FacebookIcon fontSize="inherit" />,
+    icon: <FacebookIcon fontSize="inherit" alt="Facebook" />,
   },
   {
     label: "YouTube",
     href: "",
-    icon: <YouTubeIcon fontSize="inherit" />,
+    icon: <YouTubeIcon fontSize="inherit" alt="YouTube" />,
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/company/montes-abogados-asociados/?viewAsMember=true",
-    icon: <LinkedInIcon fontSize="inherit" />,
+    icon: <LinkedInIcon fontSize="inherit" alt="LinkedIn" />,
   },
   {
     label: "WhatsApp",
     href: "https://wa.me/573007257266",
-    icon: <WhatsAppIcon fontSize="inherit" />,
+    icon: <WhatsAppIcon fontSize="inherit" alt="WhatsApp" />,
   },
 ];
 
@@ -46,25 +46,22 @@ export const Footer = () => {
         backgroundColor: theme.footer,
         color: theme.textPrimary,
       }}
-      className="w-full h-[800px] mx-auto py-6 flex flex-col items-center px-6 xl:grid xl:grid-cols-4 xl:h-[400px] xl:px-24 xl:pt-[50px] xl:gap-x-6 xl:gap-y-2 xl:items-start"
+      className="w-full mx-auto py-6 flex flex-col items-center px-6 xl:grid xl:grid-cols-4 xl:h-[400px] xl:px-24 xl:pt-[50px] xl:gap-x-6 xl:gap-y-2 xl:items-start"
     >
       <div className="flex flex-col justify-between items-center xl:max-w-[400px] xl:col-span-2 xl:flex xl:flex-col xl:items-start">
-        <div className="max-w-[70px] py-2">
+        <div className="max-w-[60px] py-2">
           <Link to="/">
             <img src={darkMode ? logoCuadradoBlanco : logoCuadrado} alt="Logo principal" />
           </Link>
         </div>
-        <div style={{color:theme.textPrimary}} className="py-2 text-center text-[16px] xl:text-left font-abc2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        <div style={{ color: theme.textPrimary }} className="py-2 text-center text-[14px] xl:text-left font-abc2">
+          Montes Abogados Asociados se fundó para apoyar a nuestros clientes en la gestión eficiente de sus procesos jurídicos. Nos destacamos por nuestra rigurosidad, excelencia en conceptos legales, calidad y experiencia profesional. Innovamos en áreas como la administración de recursos humanos, recuperación de cartera, derecho comercial y societario. Nuestra misión es proporcionar soluciones jurídicas de alta calidad, adaptadas a las necesidades específicas de cada cliente.
         </div>
       </div>
 
       <div className="py-2 text-center text-[16px] xl:text-left font-abc2">
-        <ul style={{color:theme.textPrimary}}>
-          <li style={{color:theme.primary}} className="font-black underline text-[18px]">
+        <ul style={{ color: theme.textPrimary }}>
+          <li style={{ color: theme.primary }} className="font-black underline text-[18px]">
             Mapa del sitio
           </li>
           <Link to="/soluciones">
@@ -82,8 +79,8 @@ export const Footer = () => {
         </ul>
       </div>
 
-      <div style={{ color: theme.textPrimary}} className="py-2 text-center text-[16px] xl:text-left xl:justify-start font-abc2">
-        <p style={{ color: theme.primary}} className="font-black underline text-[18px]">
+      <div style={{ color: theme.textPrimary }} className="py-2 text-center text-[16px] xl:text-left xl:justify-start font-abc2">
+        <p style={{ color: theme.primary }} className="font-black underline text-[18px]">
           Contáctanos
         </p>
         <p className="font-black">Dirección</p>
@@ -101,7 +98,7 @@ export const Footer = () => {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={link.label}
+            aria-label={link.label} // Añade aria-label para accesibilidad
           >
             <IconButton
               sx={{

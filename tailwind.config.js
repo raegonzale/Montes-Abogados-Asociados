@@ -16,8 +16,6 @@ export default {
       blue: "#1976d2",
       lightBlue: "#00D1FF",
       darkBlue: "#3196F3",
-      blueBg: "EDFBFF",
-      red: "#FF0000",
       grey: "#f5f5f5",
     },
     animation: {

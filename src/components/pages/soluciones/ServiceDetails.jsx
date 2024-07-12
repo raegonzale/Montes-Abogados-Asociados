@@ -41,7 +41,7 @@ const ServiceDetails = () => {
               mt: 1,
               ml: 1,
               width: 300,
-              height: 380,
+              height: 340,
             },
           }}
         >

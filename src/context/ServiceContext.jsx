@@ -1,10 +1,10 @@
 import { createContext } from "react";
 import PropTypes from "prop-types";
-import adminRH from "../assets/images/adminRH.jpg";
-import cartera from "../assets/images/cartera.jpg";
-import comercial from "../assets/images/comercial.jpg";
-import intelectual from "../assets/images/intelectual.jpg";
-import laboral from "../assets/images/laboral.jpg";
+import adminRH from "../assets/images/adminRH.webp";
+import cartera from "../assets/images/cartera.webp";
+import comercial from "../assets/images/comercial.webp";
+import intelectual from "../assets/images/intelectual.webp";
+import laboral from "../assets/images/laboral.webp";
 import societario from "../assets/images/societario.webp";
 
 import EngineeringIcon from '@mui/icons-material/Engineering';
